@@ -1,4 +1,4 @@
-udeimport * as Haptics from 'expo-haptics';
+import * as Haptics from 'expo-haptics';
 
 import { ProximityLevel } from '@/signal/proximity';
 
