@@ -1,0 +1,42 @@
+{
+  "expo": {
+    "name": "Proximis",
+    "slug": "proximis",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "dark",
+    "backgroundColor": "#060910",
+    "ios": {
+      "bundleIdentifier": "com.example.proximis",
+      "supportsTablet": true,
+      "infoPlist": {
+        "UIBackgroundModes": ["bluetooth-central"]
+      }
+    },
+    "android": {
+      "package": "com.example.proximis",
+      "permissions": [
+        "android.permission.BLUETOOTH_SCAN",
+        "android.permission.BLUETOOTH_CONNECT",
+        "android.permission.ACCESS_FINE_LOCATION",
+        "android.permission.ACCESS_COARSE_LOCATION"
+      ]
+    },
+    "plugins": [
+      [
+        "react-native-ble-plx",
+        {
+          "isBackgroundEnabled": true,
+          "modes": ["central"],
+          "bluetoothAlwaysPermission": "Proximis uses Bluetooth to discover nearby devices and measure their signal strength."
+        }
+      ],
+      [
+        "expo-build-properties",
+        {
+          "android": { "minSdkVersion": 23 }
+        }
+      ]
+    ]
+  }
+}
